@@ -26,16 +26,11 @@ public class Program {
 		y.b = sc.nextDouble();
 		y.c = sc.nextDouble();
 		
-		double p = (x.a + x.b + x.c) / 2.00;
-		double areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
+	
+		System.out.printf("Triangle X area: %.4f%n", x.area());
+		System.out.printf("Triangle Y area: %.4f%n", y.area());
 		
-		p = (y.a + y.b + y.c) / 2.00;
-		double areay = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
-		
-		System.out.printf("Triangle X area: %.4f%n", areaX);
-		System.out.printf("Triangle Y area: %.4f%n", areay);
-		
-		if (areaX > areay) {
+		if (x.area() > y.area()) {
 			System.out.println("X is the largest area");
 		}else
 		{
